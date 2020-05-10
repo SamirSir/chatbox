@@ -1,0 +1,18 @@
+
+
+<div id="chatbox" style="height: 250px; overflow-y: scroll;" >
+	<% @messages.each do |message| %>
+		<%= render 'messages/message', message: message %><br>
+	<% end %>
+</div> 
+<hr>
+ <div>
+ 	<% if current_user %>
+ 		<%= render 'pages/form' %>
+	 	<hr>
+		<div><%= render 'pages/sign' %></div>
+ 	<% else %>
+ 		<p>You need to <%= link_to "Log In", new_user_session_path %> for chatting.</p> 
+ 	<% end %>	
+ </div>
+

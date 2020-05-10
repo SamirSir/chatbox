@@ -1,0 +1,6 @@
+
+
+<%= form_for @message do |f| %>
+	<%= f.text_field :body, placeholder: "Say something . . ." %>	
+	<%= f.submit "Send", class: "btn btn-primary" %>
+<% end %>
